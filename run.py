@@ -53,8 +53,8 @@ def main():
                 pass_len = passlen(lenpass)
                 Credential(account, name, password)
 
-            # #View Account
-            # elif choices == 2:
-            #     Credential.view()
+            #View Account
+            elif choices == 2:
+                Credential.view()
 
     
