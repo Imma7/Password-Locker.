@@ -46,12 +46,12 @@ def main():
             
             choices = int(input("1. Create Account \n2. View Account \n3. Sign Out"))
 
-            # #Create Account
-            # if choices == 1:
-            #     account = input("Enter account name: ")
-            #     username = input("Enter your username: ")
-            #     pass_len = passlen(lenpass)
-            #     Credential(account, name, password)
+            #Create Account
+            if choices == 1:
+                account = input("Enter account name: ")
+                username = input("Enter your username: ")
+                pass_len = passlen(lenpass)
+                Credential(account, name, password)
 
             # #View Account
             # elif choices == 2:
