@@ -4,8 +4,8 @@ import sys
 import random
 import string
 
-# from user import User
-# from credential import Credential
+from user import User
+from credential import Credential
 
 def passlen(l):
     _all = string.ascii_letters+ string.punctuation+string.digits
@@ -51,15 +51,15 @@ def main():
                 account = input("Enter account name: ")
                 username = input("Enter your username: ")
                 pass_len = passlen(lenpass)
-                Credential(account, name, password)
+                Credential(account, username, password)
 
             #View Account
             elif choices == 2:
                 Credential.view()
 
-            # #Delete Account
-            # elif choices == 4:
-            #     Credential.delete(input("Which account do you wish to delete ?"))
+            #Delete Account
+            elif choices == 4:
+                Credential.delete_account(input("Which account do you wish to delete ?"))
 
             #Sign Out
             elif choices == 3:
