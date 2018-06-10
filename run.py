@@ -10,3 +10,15 @@ import string
 def passlen(l):
     _all = string.ascii_letters+ string.punctuation+string.digits
     return "".join(random.sample(_all,l))
+
+def sign_in():
+    username = input("Enter username: ")
+    password1 = input("Enter password: ")
+    password2 = input("Enter your password again: ")
+
+    if password1 == password2:
+        User(username, password1)
+        return True
+    else:
+        print("Password doesn't match")
+        sign_in()
