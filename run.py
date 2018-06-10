@@ -22,3 +22,20 @@ def sign_in():
     else:
         print("Password doesn't match")
         sign_in()
+
+def start():
+    print("Start Here")
+    options = True
+    while options:
+        inp = int(input("1. Sign In \n2. Exit"))
+        if inp == 1:
+            return sign_in()
+            # options = False
+        elif inp == 2:
+            print("You are Signing Out")
+            sys.exit(4)
+        else:
+            print("Select 1 or 2")
+
+
+    
