@@ -37,5 +37,24 @@ def start():
         else:
             print("Select 1 or 2")
 
+def main():
+    print("Welcome to Password Locker")
+    signed_in = start()
+    if signed_in:
+        signing_in = True
+        while signing_in:
+            
+            choices = int(input("1. Create Account \n2. View Account \n3. Sign Out"))
+
+            # #Create Account
+            # if choices == 1:
+            #     account = input("Enter account name: ")
+            #     username = input("Enter your username: ")
+            #     pass_len = passlen(lenpass)
+            #     Credential(account, name, password)
+
+            # #View Account
+            # elif choices == 2:
+            #     Credential.view()
 
     
