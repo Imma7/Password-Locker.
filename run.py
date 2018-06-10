@@ -20,7 +20,9 @@ def sign_in():
         User(username, password1)
         return True
     else:
+        print('\n')
         print("Password doesn't match")
+        print('\n')
         sign_in()
 
 def start():
@@ -28,10 +30,12 @@ def start():
     options = True
     while options:
         inp = int(input("1. Sign In \n2. Exit"))
+        print('\n')
         if inp == 1:
             return sign_in()
             # options = False
         elif inp == 2:
+            print('\n')
             print("You are Signing Out")
             sys.exit(4)
         else:
@@ -44,26 +48,29 @@ def main():
         signing_in = True
         while signing_in:
             
-            choices = int(input("1. Create Account \n2. View Account \n3. Sign Out"))
+            print('\n')
+            choices = int(input("1. Create Account \n2. View Account \n3. Delete Account \n4. Sign Out"))
 
             #Create Account
             if choices == 1:
                 account = input("Enter account name: ")
                 username = input("Enter your username: ")
-                pass_len = passlen(lenpass)
+                password_len = int(input("Ener password length: "))
+                password = passlen(password_len)
                 Credential(account, username, password)
 
             #View Account
             elif choices == 2:
-                Credential.view()
+                Credential.view_account()
 
             #Delete Account
-            elif choices == 4:
+            elif choices == 3:
                 Credential.delete_account(input("Which account do you wish to delete ?"))
 
             #Sign Out
-            elif choices == 3:
-                print("You are exiting")
+            elif choices == 4:
+                print('-'*40)
+                print("You are exiting. Bye :)")
                 signing_in = False
 
 if __name__ == '__main__':

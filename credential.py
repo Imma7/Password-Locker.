@@ -16,15 +16,15 @@ class Credential:
 
     @classmethod
     def view_account(cls):
+        print('-'*40)
         print("Existing Accounts: ")
         print('-'*40)
         print("Account Name || UserName || Password")
         for i in cls.credential_list:
             print(f" {i['account']} || {i['username']} || {i['password']}")
+            
 
-    # @classmethod
-    # def search_account():
-    #     pass
+    
 
     @classmethod
     def delete_account(cls, acc):
