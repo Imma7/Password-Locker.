@@ -65,4 +65,7 @@ def main():
             elif choices == 3:
                 print("You are exiting")
                 signing_in = False
+
+if __name__ == '__main__':
+    main()
     
