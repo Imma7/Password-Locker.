@@ -5,7 +5,7 @@
 ### Description
 Password Locker is a pyhton based application that allows a user to generate and store passwords for various accounts. Users can manage their accounts by viewing them, searching and deleting them.
 
-##Setup/Installation Requirements
+## Setup/Installation Requirements
 
 ### Installation 
 ```bash
