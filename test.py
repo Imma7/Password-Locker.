@@ -22,7 +22,7 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.name,"Imma")
         self.assertEqual(self.new_user.password,"1234")
-        
+
     def tearDown(self):
         '''
         tearDown method that does clean up after each test case has run
@@ -61,25 +61,26 @@ class TestCredential(unittest.TestCase):
         test_save_account test case to test if the credential object is saved into the credential list
         '''
         self.new_credential.save_account() #saving new account
-        self.assertEqual(len(Credential.credential_list),3)
+        self.assertEqual(len(Credential.credential_list),5)
 
-    # def test_view_account(self):
-    #     '''
-    #     test to check if we can view accounts created and display innformation
-    #     '''
-    #     self.assertEqual(Credential.view_account(), Credential.credential_list)
+    def test_view_account(self):
+        '''
+        test to check if we can view accounts created and display innformation
+        '''
+        self.assertEqual(Credential.view_account(), Credential.credential_list)
         
-    # def test_delete_account(self):
-    #     '''
-    #     test_delete_account to test if we can remove a user from our credential list
-    #     '''
-    #     self.new_credential.save_account()
-    #     test_credential = Credential("GitHub", "Manu", "5679") 
+        
+    def test_delete_account(self):
+        '''
+        test_delete_account to test if we can remove a user from our credential list
+        '''
+        self.new_credential.delete_account(self)
+        test_credential = Credential("GitHub", "Manu", "5679") 
 
-    #     test_credential.save_account()
+        test_credential.delete_account(self)
 
-    #     self.new_credential.delete_account() #Deleting a account object
-    #     self.assertEqual(len(Credential.credential_list)
+        self.new_credential.delete_account(self) #Deleting a account object
+        self.assertEqual(len(Credential.credential_list),2)
 
 if __name__ == '__main__':
     unittest.main()

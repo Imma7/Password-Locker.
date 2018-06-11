@@ -29,8 +29,8 @@ class Credential:
     
 
     @classmethod
-    def delete_account(cls, acc):
+    def delete_account(cls, account):
         for a in cls.credential_list:
-            if a['account'] == acc:
+            if a['account'] == account:
                 cls.credential_list.remove(a)
     

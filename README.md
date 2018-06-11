@@ -51,5 +51,5 @@ Testingw was done using python inbuild tools called **unittest**
 ## Known Bugs
 No known bugs. If found email me at **immamugambi@gmail.com**
 
-## License ([MIT License](https://github.com/Imma7/Password-Locker./blob/master/LICENSE))
+## ([License](https://github.com/Imma7/Password-Locker./blob/master/LICENSE))
 Copyright (c) 2018 **Immanuel Mugambi**
