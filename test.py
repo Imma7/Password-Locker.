@@ -63,11 +63,11 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_account() #saving new account
         self.assertEqual(len(Credential.credential_list),5)
 
-    def test_view_account(self):
-        '''
-        test to check if we can view accounts created and display innformation
-        '''
-        self.assertEqual(Credential.view_account(), Credential.credential_list)
+    # def test_view_account(self):
+    #     '''
+    #     test to check if we can view accounts created and display innformation
+    #     '''
+    #     self.assertEqual(Credential.view_account(), Credential.credential_list)
         
         
     def test_delete_account(self):
