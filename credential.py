@@ -9,10 +9,12 @@ class Credential:
         Credential.credential_list.append({'account': self.account, 'username': self.username, 'password': self.password})
 
     def save_account(self):
+        '''
+        save_account method saves account objects into credential_list
+        '''
+
         Credential.credential_list.append(self)
 
-    # def delete_account():
-    #     pass
 
     @classmethod
     def view_account(cls):

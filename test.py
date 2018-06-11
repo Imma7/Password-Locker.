@@ -22,8 +22,15 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.name,"Imma")
         self.assertEqual(self.new_user.password,"1234")
+        
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run
+        '''
+        User.user_list = []
 
-
+    def return_user(self):
+        self.new_user.return_user()
 
 
 class TestCredential(unittest.TestCase):
@@ -47,3 +54,32 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.account,"GitHub")
         self.assertEqual(self.new_credential.username,"Manu")
         self.assertEqual(self.new_credential.password,"5678")
+
+
+    def test_save_account(self):
+        '''
+        test_save_account test case to test if the credential object is saved into the credential list
+        '''
+        self.new_credential.save_account() #saving new account
+        self.assertEqual(len(Credential.credential_list),3)
+
+    # def test_view_account(self):
+    #     '''
+    #     test to check if we can view accounts created and display innformation
+    #     '''
+    #     self.assertEqual(Credential.view_account(), Credential.credential_list)
+        
+    # def test_delete_account(self):
+    #     '''
+    #     test_delete_account to test if we can remove a user from our credential list
+    #     '''
+    #     self.new_credential.save_account()
+    #     test_credential = Credential("GitHub", "Manu", "5679") 
+
+    #     test_credential.save_account()
+
+    #     self.new_credential.delete_account() #Deleting a account object
+    #     self.assertEqual(len(Credential.credential_list)
+
+if __name__ == '__main__':
+    unittest.main()
