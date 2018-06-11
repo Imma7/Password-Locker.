@@ -32,3 +32,18 @@ class TestCredential(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
+
+    def setUp(self):
+        '''
+        Set up method to run before each test cases
+        '''
+        self.new_credential = Credential("GitHub", "Manu", "5678") #create credential object
+
+    def test_init(self):
+        '''
+        test_init test case to test if the object is instantiated properly
+        '''
+
+        self.assertEqual(self.new_credential.account,"GitHub")
+        self.assertEqual(self.new_credential.username,"Manu")
+        self.assertEqual(self.new_credential.password,"5678")
